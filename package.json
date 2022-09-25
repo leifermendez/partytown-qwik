@@ -1,0 +1,16 @@
+{
+  "name": "partytown-qwik",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@builder.io/partytown": "^0.7.0",
+    "@builder.io/qwik": "^0.9.0"
+  }
+}
