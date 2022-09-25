@@ -8,18 +8,19 @@
     "importsNotUsedAsValues": "error",
     "esModuleInterop": true,
     "moduleResolution": "node",
-    "outDir": "dist",
+    "outDir": "adapter",
     "declaration": true,
     "skipLibCheck": true,
     "sourceMap": false,
     "jsx": "react-jsx",
-    "declarationDir": "./types",
     "jsxImportSource": "@builder.io/qwik",
-    "baseUrl": ".",
+    "baseUrl": "./src",
+
     "paths": {
       "@builder.io/partytown/integration": [
         "node_modules/@builder.io/partytown/integration/index.d.ts"
       ]
     }
-  }
+  },
+  "include": ["src", "tests"]
 }
