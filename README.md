@@ -1,31 +1,42 @@
 ### Qwik Party Town
 
-Hi everyone!
-It is a Alpha version Qwik Party Town adapter
-I'm working...
+This is a package that facilitates the implementation of PartyTown in Qwik. If you don't know what Qwik is (See)
 
-Currently it work fine in my website
+The implementation is easy, just import and enjoy, if you want to make use of a more advanced configuration you can pass the settings as an argument ([see possible arguments](https://partytown.builder.io/configuration)).
 
-I guess the next days add more documentacion and testing and more stuff
+More docs
 
-Bye Have a nice day ;)
+- [Common Services](https://partytown.builder.io/common-services)
+- [Others Integrations](https://partytown.builder.io/integrations)
+- [Why need PartyTown - Video Spanish](https://youtu.be/ABftIDt6H6g)
 
+> Example Google Analytics
+
+```tsx
+import { QwikPartytown } from "partytown-qwik/adapter";
+
+<QwikPartytown forward={["dataLayer.push"]} />;
+<script
+  async
+  type="text/partytown"
+  src="https://www.googletagmanager.com/gtag/js?id=G-NHJQPYGYCB"
+/>;
 ```
-import { QwikPartytown } from "partytown-qwik/src/qwik";
 
-  const urlConfig = function (url: any) {
-    if (url.hostname === "connect.facebook.net") {
-      const proxyMap: any = {
-        "connect.facebook.net": "d2gn02yz3528v5.cloudfront.net",
-      };
-      url.hostname = proxyMap[url.hostname] || url.hostname;
-      return url;
-    }
+> Example Facebook Pixel
+> [Why proxy? View explanation](https://partytown.builder.io/proxying-requests)
+
+```tsx
+const proxyFb = function (url: any) {
+  if (url.hostname === "connect.facebook.net") {
+    const proxyMap: any = {
+      "connect.facebook.net": "your-proxy-reverse.cloudfront.net",
+    };
+    url.hostname = proxyMap[url.hostname] || url.hostname;
     return url;
-  };
+  }
+  return url;
+};
 
-     <QwikPartytown
-        resolveUrl={urlConfig}
-        forward={["dataLayer.push", "fbq"]}
-      />
+<QwikPartytown resolveUrl={proxyFb} forward={["dataLayer.push", "fbq"]} />;
 ```
