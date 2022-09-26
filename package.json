@@ -7,7 +7,7 @@
     "clean": "rm -rf ./adapter",
     "clean-build": "rm -rf ./adapter/src && rm -rf ./adapter/tests",
     "build": "tsc && mv ./adapter/src/* ./adapter",
-    "start": "npm run test && npm run clean && npm run build && npm run clean-build && npm pack",
+    "release": "npm run test",
     "test": "tsm node_modules/uvu/bin.js tests --tsmconfig tsm.cjs"
   },
   "license": "ISC",
