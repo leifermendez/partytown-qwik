@@ -20,7 +20,7 @@ jobs:
       - run: npm run clean
       - run: npm run build
       - run: npm run clean-build
-      - run: npm run pack
+      - run: npm pack
 
   publish-npm:
     needs: build
