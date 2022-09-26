@@ -19,6 +19,12 @@ The implementation is easy, just import and enjoy, if you want to make use of a 
 
 #### Qwik Integration
 
+**Install**
+
+`npm i @leifermendez/partytown-qwik@latest`
+
+**How use**
+
 > **Example Google Analytics**
 
 ```tsx
