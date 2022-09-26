@@ -4,10 +4,9 @@
   "description": "✌️ Partytown adapter for qwik",
   "main": "index.js",
   "scripts": {
-    "clean": "rm -rf ./adapter",
     "clean-build": "rm -rf ./adapter/src && rm -rf ./adapter/tests",
-    "build": "tsc && mv ./adapter/src/* ./adapter",
-    "release": "npm run test && npm run clean && npm run build && npm run clean-build && npm pack",
+    "build": "rm -rf ./adapter && tsc && mv ./adapter/src/* ./adapter",
+    "release": "npm run build && npm run clean-build && npm pack",
     "test": "tsm node_modules/uvu/bin.js tests --tsmconfig tsm.cjs"
   },
   "license": "ISC",
@@ -43,6 +42,6 @@
     "react"
   ],
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
+    "access": "public"
   }
 }
