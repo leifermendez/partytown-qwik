@@ -17,7 +17,6 @@ jobs:
           node-version: 16
       - run: npm ci
       - run: npm test
-      - run: npm run clean
       - run: npm run build
       - run: npm run clean-build
       - run: npm pack
