@@ -1,6 +1,9 @@
 # Qwik Partytown 🎉
 
 <img width="838" alt="Partytown github fit 2x" src="https://user-images.githubusercontent.com/452425/134568488-f36f4640-9ada-4a78-a969-2b8315cf7f47.png">
+
+[![Build and Test](https://github.com/leifermendez/partytown-qwik/actions/workflows/build.yml/badge.svg)](https://github.com/leifermendez/partytown-qwik/actions/workflows/build.yml)
+
 This is a package that facilitates the implementation of PartyTown in Qwik. If you don't know what Qwik is (See)
 
 The implementation is easy, just import and enjoy, if you want to make use of a more advanced configuration you can pass the settings as an argument ([see possible arguments](https://partytown.builder.io/configuration)).
