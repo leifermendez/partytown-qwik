@@ -4,7 +4,7 @@
 name: 🚀 Publish
 on:
   release:
-    types: [published]
+    types: [created]
 
 jobs:
   build:
