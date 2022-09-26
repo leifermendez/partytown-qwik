@@ -1,6 +1,5 @@
 import { jsx as _jsx } from "@builder.io/qwik/jsx-runtime";
 import { partytownSnippet, } from "@builder.io/partytown/integration";
-import "@builder.io/qwik";
 /**
  * @public
  * You can pass setting with props

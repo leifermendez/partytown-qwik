@@ -1,7 +1,7 @@
 {
-  "name": "partytown-qwik",
-  "version": "1.0.2",
-  "description": "",
+  "name": "@leifermendez/partytown-qwik",
+  "version": "1.0.3",
+  "description": "✌️ Partytown adapter for qwik",
   "main": "index.js",
   "scripts": {
     "clean": "rm -rf ./adapter",
@@ -10,8 +10,6 @@
     "release": "npm run test && npm run clean && npm run build && npm run clean-build && npm pack",
     "test": "tsm node_modules/uvu/bin.js tests --tsmconfig tsm.cjs"
   },
-  "keywords": [],
-  "author": "",
   "license": "ISC",
   "dependencies": {
     "@builder.io/partytown": "^0.7.0",
@@ -26,5 +24,25 @@
   "files": [
     "adapter/",
     "!adapter/test"
-  ]
+  ],
+  "author": "Leifer Mendez",
+  "homepage": "https://github.com/leifermendez/partytown-qwik#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leifermendez/partytown-qwik.git"
+  },
+  "keywords": [
+    "web worker",
+    "3rd-party",
+    "third-party",
+    "analytics",
+    "webapp",
+    "performance",
+    "lighthouse",
+    "core web vitals",
+    "react"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
 }
