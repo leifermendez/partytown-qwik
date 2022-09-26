@@ -18,8 +18,14 @@ jobs:
         run: npm ci
       - name: testing 🙄
         run: npm run test
-      - name: release 🔧
-        run: npm run release
+      - name: clean 🔧
+        run: npm run clean
+      - name: build 🔧
+        run: npm run build
+      - name: clean build 🔧
+        run: npm run clean-build
+      - name: pack 📦
+        run: npm run pack
       - name: Publish package on NPM 📦
         run: npm publish
         env:
