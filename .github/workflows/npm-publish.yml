@@ -3,9 +3,8 @@
 
 name: 🚀 Publish
 on:
-  push:
-    branches:
-      - main
+  release:
+    types: [published]
 
 jobs:
   build:
