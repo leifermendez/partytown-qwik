@@ -1,3 +1,3 @@
-declare module "partytown-qwik" {
+declare module "@leifermendez/partytown-qwik" {
   interface QwikPartytown {}
 }
