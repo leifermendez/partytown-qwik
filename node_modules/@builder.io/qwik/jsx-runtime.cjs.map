@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../src/jsx-runtime/index.ts"],
+  "sourcesContent": ["export { jsx, jsxs, jsxDEV, Fragment } from '@builder.io/qwik';\nexport type { QwikJSX as JSX, JSXNode, FunctionComponent } from '@builder.io/qwik';\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,kBAA4C;",
+  "names": []
+}

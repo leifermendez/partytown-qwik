@@ -18,22 +18,21 @@ export interface PartytownProps extends PartytownConfig {}
  * You can pass setting with props
  */
 
-export const QwikPartytown = () =>
-  component$((props: PartytownProps) => {
-    if (typeof document !== "undefined" && !document._partytown) {
-      if (!document.querySelector("script[data-partytown]")) {
-        const scriptElm = document.createElement("script");
-        scriptElm.dataset.partytown = "";
-        scriptElm.innerHTML = partytownSnippet(props);
-        document.head.appendChild(scriptElm);
-      }
-      // should only append this script once per document, and is not dynamic
-      document._partytown = true;
+export const QwikPartytown = component$((props?: PartytownProps) => {
+  if (typeof document !== "undefined" && !document._partytown) {
+    if (!document.querySelector("script[data-partytown]")) {
+      const scriptElm = document.createElement("script");
+      scriptElm.dataset.partytown = "";
+      scriptElm.innerHTML = partytownSnippet(props);
+      document.head.appendChild(scriptElm);
     }
+    // should only append this script once per document, and is not dynamic
+    document._partytown = true;
+  }
 
-    const innerHTML = partytownSnippet(props);
-    return <script>{innerHTML}</script>;
-  });
+  const innerHTML = partytownSnippet(props);
+  return <script>{innerHTML}</script>;
+});
 
 interface PartytownDocument extends Document {
   _partytown?: boolean;

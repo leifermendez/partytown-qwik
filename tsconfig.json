@@ -21,6 +21,5 @@
         "node_modules/@builder.io/partytown/integration/index.d.ts"
       ]
     }
-  },
-  "include": ["src", "tests"]
+  }
 }
