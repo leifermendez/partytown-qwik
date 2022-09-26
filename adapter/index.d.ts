@@ -12,4 +12,4 @@ export interface PartytownProps extends PartytownConfig {
  * @public
  * You can pass setting with props
  */
-export declare const QwikPartytown: import("@builder.io/qwik").Component<{}>;
+export declare const QwikPartytown: (props: PartytownProps) => any;

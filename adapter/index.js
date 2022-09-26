@@ -1,11 +1,11 @@
 import { jsx as _jsx } from "@builder.io/qwik/jsx-runtime";
 import { partytownSnippet, } from "@builder.io/partytown/integration";
-import { component$ } from "@builder.io/qwik";
+import "@builder.io/qwik";
 /**
  * @public
  * You can pass setting with props
  */
-export const QwikPartytown = component$((props) => {
+export const QwikPartytown = (props) => {
     if (typeof document !== "undefined" && !document._partytown) {
         if (!document.querySelector("script[data-partytown]")) {
             const scriptElm = document.createElement("script");
@@ -18,4 +18,4 @@ export const QwikPartytown = component$((props) => {
     }
     const innerHTML = partytownSnippet(props);
     return _jsx("script", { children: innerHTML });
-});
+};

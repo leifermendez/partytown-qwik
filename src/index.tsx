@@ -2,7 +2,6 @@ import {
   partytownSnippet,
   PartytownConfig,
 } from "@builder.io/partytown/integration";
-import { component$ } from "@builder.io/qwik";
 
 /**
  * Props for `<QwikPartytown/>`, which extends the Partytown Config.
@@ -17,8 +16,7 @@ export interface PartytownProps extends PartytownConfig {}
  * @public
  * You can pass setting with props
  */
-
-export const QwikPartytown = component$((props?: PartytownProps) => {
+export const QwikPartytown = (props: PartytownProps): any => {
   if (typeof document !== "undefined" && !document._partytown) {
     if (!document.querySelector("script[data-partytown]")) {
       const scriptElm = document.createElement("script");
@@ -32,7 +30,7 @@ export const QwikPartytown = component$((props?: PartytownProps) => {
 
   const innerHTML = partytownSnippet(props);
   return <script>{innerHTML}</script>;
-});
+};
 
 interface PartytownDocument extends Document {
   _partytown?: boolean;
