@@ -23,7 +23,25 @@ The implementation is easy, just import and enjoy, if you want to make use of a 
 
 `npm i @leifermendez/partytown-qwik@latest`
 
+If you want view [demo code](https://stackblitz.com/edit/qwik-partytown?file=src/root.tsx)
+
 **How use**
+
+```tsx
+// vite.config.ts
+
+import { qwikCity } from "@builder.io/qwik-city/vite";
+import { qwikVite } from "@builder.io/qwik/optimizer";
+import { defineConfig } from "vite";
+import tsconfigPaths from "vite-tsconfig-paths";
+
+export default defineConfig(() => {
+  return {
+    ssr: { target: "webworker", noExternal: true },
+    plugins: [qwikCity(), qwikVite(), tsconfigPaths()],
+  };
+});
+```
 
 > **Example Google Analytics**
 
