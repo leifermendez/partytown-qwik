@@ -24,7 +24,6 @@ export const QwikPartytown = (props: PartytownProps): any => {
       scriptElm.innerHTML = partytownSnippet(props);
       document.head.appendChild(scriptElm);
     }
-    // should only append this script once per document, and is not dynamic
     document._partytown = true;
   }
 

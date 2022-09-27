@@ -1,7 +1,6 @@
 import { ElementFixture } from "@builder.io/qwik/testing";
 import { suite } from "uvu";
-import { match, snapshot } from "uvu/assert";
-import { format } from "prettier";
+import { match } from "uvu/assert";
 import { render } from "@builder.io/qwik";
 import { QwikPartytown } from "../src/index";
 
@@ -19,20 +18,8 @@ qComponent(
   }
 );
 
-export async function expectDOM(actual: Element, expected: string) {
-  const options = {
-    parser: "html",
-    htmlWhitespaceSensitivity: "ignore" as const,
-  };
-  snapshot(format(actual.outerHTML, options), format(expected, options));
-}
-
 export async function expectRegex(actual: Element, expected: string) {
-  const options = {
-    parser: "html",
-    htmlWhitespaceSensitivity: "ignore" as const,
-  };
-  match(format(actual.outerHTML, options), expected);
+  match(actual.outerHTML, expected);
 }
 
 qComponent.run();

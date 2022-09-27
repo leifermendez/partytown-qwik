@@ -15,8 +15,6 @@
     "@builder.io/qwik": "^0.9.0"
   },
   "devDependencies": {
-    "@types/prettier": "^2.7.1",
-    "prettier": "^2.7.1",
     "tsm": "^2.2.2",
     "uvu": "^0.5.6"
   },
